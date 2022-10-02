@@ -1,0 +1,18 @@
+utility to set backlight intensity on a laptop
+
+usage:
+
+          bl [ +val[%] | -val[%] | val[%] ]
+          
+if no argument given, then current brightness level is printed
+
++val will increment brightness by that amount
+-val will decrement brightness by that amount
+val will set brightness to that amount
+
+a percentage of maximum brightness can also be used by appending '%'
+
+brightness control is exposed via /sys/class/backlight/intel_backlight
+on my system. check your system and change if necessary.
+
+brightness is enforced within the range 0..max_brightness
